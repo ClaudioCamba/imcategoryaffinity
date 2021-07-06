@@ -1,1 +1,189 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="IM Category Affinity Generator" name="IM Category Affinity Generator">
+    <title>IM Category Affinity Generator</title>
+    <link href="css/style-main.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+    <!-- Lightbox for Tracking & Links -->
+    <div class="editLink-container">
+        <div class="shade"> </div>
+        <div class="editLink-wrapper">
+            <div class="top">
+                <span class="main-txt">Enter Text and URL</span>
+                <button class="cancel-btn">Cancel</button>
+                <button class="save-btn">Save</button>
+            </div>
+            <span class="line"> </span>
+            <div class="bottom">
+                <span class="url-txt">Enter CTA Text:</span>
+                <input class="get-text" placeholder="Buy now" />
+                <span class="url-txt">Enter CTA Title:</span>
+                <input class="get-titleText" placeholder="Buy now" />
+                <span class="url-txt">Enter BUY Page URL:</span>
+                <input class="get-link" placeholder="https://www.samsung.com/uk/smartphones/galaxy-z-fold2/buy/" />
+            </div>
+            <div class="tracking-top">
+                <span class="main-txt">Enter Tracking</span>
+            </div>
+            <span class="line"> </span>
+            <div class="tracking-bottom">
+                <span class="tracking-event-input">Analytics event number:</span>
+                <input type="number" class="get-event" placeholder="48" />
+                <span class="tracking-evar-input">Analytics eVar number:</span>
+                <input type="number" class="get-evar" placeholder="48" />
+                <span class="tracking-evar-desc">Analytics eVar description:</span>
+                <input class="get-evar-desc" placeholder="home:im_ca_banner_buy now" />
+            </div>
+        </div>
+    </div>
+
+    <div class="cg-container">
+        <div class="cg-title-logo">
+            <img class="cg-img" src="https://cdn.samsung.com/etc/designs/smg/global/imgs/svg-logo.svg" />
+        </div>
+        <div class="cg-content">
+            <div class="cg-content-text">
+                <h2 class="cg-content-text-title">IM Category Affinity<br />Code Generator</h2>
+                <p class="cg-content-text-desc">This page will allow you to generate code required for the IM Category Affinity test you are building on the home page.
+                </p>
+                <p class="cg-content-text-steps">
+                    <strong>Step 1:</strong> Click on the banner text you would like to change and make the update directly.
+                    <br />
+                    <strong>Step 2:</strong> Hover over the CTA button and by clicking on the tooltip that appears next to the CTA button you can interact with them e.g. links/titles/copy/add tracking.
+                    <br />
+                    <strong>Step 3:</strong> Once you are happy with your changes then just click generate.
+                    <br />
+                    <strong>Step 4:</strong> The code should appear in the empty box below, click copy to clipboard then press ctrl+v/cmd+v or right click and paste the code back into Adobe Target HTML content block.
+                </p>
+                <!-- <p class="cg-content-text-disc" style="color:red;">*If nothing is entered then you will retrieve
+                                  <strong>pre-set UK
+                                      code </strong> otherwise please fill out the form below to get the correct values for your
+                                  market. </p> -->
+                <p class="cg-content-text-disc" style="color:red; font-weight:bold;"><strong>*Make sure you add the product link for the 'Buy now' CTA button before
+                                  generating the code. </strong></p>
+
+            </div>
+            <!-- Replace HTML code under here with your test HTML code -->
+            <!-- Desktop -->
+            <div class="im-ca-select">
+                <!-- <label class="marketcode-label" for="market-code">
+                              Market Code:
+                              <input type="text" class="market-code" placeholder="e.g. uk">
+                          </label> -->
+                <label for="im-select" class="select-wrapper">
+                            Select IM Device:
+                            <select name="" id="im-select">
+                              <optgroup label="Z-SERIES">
+                              <!--1-->  <option value="fold2">Galaxy Z Fold2</option> <!-- -z-fold2 --> <!-- =SM-F916 -->
+                              <!--2-->  <option value="zflip">Galaxy Z Flip</option> <!-- -z-flip --> <!-- SM-F707 --> <!-- SM-F700 -->
+                              <!--3-->  <option value="fold">Galaxy Fold</option> <!-- /galaxy-fold --> <!-- SM-F907 -->
+                              </optgroup>
+                              <optgroup label="S-SERIES">
+                              <!--7-->  <option value="s21ultra">Galaxy S21 Ultra</option><!-- -s20/ -->
+                              <!--7-->  <option value="s21all">Galaxy S21 | S21+ | Ultra</option><!-- -s20/ -->
+                              <!--7-->  <option value="s21">Galaxy S21 | S21+</option><!-- -s20/ -->
+                              <!--5-->  <option value="s20fe">Galaxy S20 FE</option> <!-- galaxy-s20-fe --> <!-- =SM-G780 -->
+                              <!--7-->  <option value="s20all">Galaxy S20 | S20+ | Ultra</option><!-- -s20/ -->
+                              <!--8-->  <option value="s10lite">Galaxy S10 Lite</option> <!-- -s10-lite -->
+                              <!--9-->  <option value="s10plus">Galaxy S10+</option> <!-- -s10plus -->
+                              <!--10-->  <option value="s105g">Galaxy S10 5G</option> <!-- -s10-5g -->
+                              <!--11-->  <option value="s10e">Galaxy S10e</option> <!-- -s10e -->
+                              <!--12-->  <option value="s10">Galaxy S10</option> <!-- -s10 -->
+                              </optgroup>
+                              <optgroup label="NOTE-SERIES">
+                              <!--14-->  <option value="n20all">Galaxy Note20 | 5G | Ultra</option> --&gt; <!-- -note20 -->
+                              <!--15-->  <option value="n10lite">Galaxy Note10 Lite</option> <!-- note10-lite --> <!-- =SM-N770 -->
+                              <!--16-->  <option value="n10plus">Galaxy Note10+</option> <!-- -note10plus --> <!-- =SM-N970 -->
+                              <!--17-->  <option value="n10">Galaxy Note10</option> <!-- -note10 -->
+                              </optgroup>
+                              <optgroup label="A-SERIES">
+                              <!--18-->  <option value="a51">Galaxy A51</option> <!-- -a51 -->
+                              <!--19-->  <option value="a21s">Galaxy A21s</option> <!-- -a21s -->
+                              <!--20-->  <option value="a41">Galaxy A41</option> <!-- -a41 -->
+                              <!--21-->  <option value="a71">Galaxy A71</option> <!-- -a71 -->
+                              <!--22-->  <option value="a20e">Galaxy A20e</option> <!-- -a20e -->
+                              <!--23-->  <option value="a90">Galaxy A90</option> <!-- -a90 -->
+                              <!--24-->  <option value="a80">Galaxy A80</option> <!-- -a80 -->
+                              </optgroup>
+                              <optgroup label="TABLETS">
+                              <!--25-->  <option value="tabs7plus">Galaxy Tab S7 | S7+</option> <!-- -tab-s7-plus -->
+                              <!--27-->  <option value="books">Galaxy Book S Qualcomm</option> <!-- -book-s-w -->
+                              <!--28-->  <option value="tabs6lite">Galaxy Tab S6 Lite</option> <!-- -tab-s6-lite -->
+                              <!--29-->  <option value="tabs6">Tab S6</option> <!-- -tab-s6 --> <!-- -tabs6 -->
+                              <!--30-->  <option value="tabs5e">Tab S5e</option> <!-- -tabs5e --><!-- -tab-s5e -->
+                              <!--31-->  <option value="tabs4">Tab S4</option> <!-- -tabs4 -->
+                              <!--32-->  <option value="taba10">Tab A 10.1"</option> <!-- -taba-t5 -->
+                              <!--33-->  <option value="taba8">Tab A 8.0"</option> <!-- -taba-t2 -->
+                              <!--34-->  <option value="tabapro">Galaxy Tab Active Pro</option> <!-- -tab-active-pro -->
+                              <!--35-->  <option value="taba2">Tab Active2</option> <!-- -tab-active2 -->
+                              </optgroup>
+                              <optgroup label="WATCHES">
+                              <!--36-->  <option value="gw3">Galaxy Watch3</option> <!-- -watch3 -->
+                              <!--37-->  <option value="gw">Galaxy Watch</option> <!-- -watch-r8 --><!-- -watch/ -->
+                              <!--38-->  <option value="gwa2">Galaxy Watch Active2</option> <!-- watch-active2 -->
+                              <!--39-->  <option value="gwa">Galaxy Watch Active</option> <!-- -watch-active/ -->
+                              <!--40-->  <option value="gwfite">Galaxy Fite</option> <!-- -fite- -->
+                              <!--41-->  <option value="gwfit">Galaxy Fit</option> <!-- -fit- -->
+                              </optgroup>
+                              <optgroup label="AUDIO">
+                              <!--42-->  <option value="gblive">Galaxy Buds Live</option> <!-- -buds-live -->
+                              <!--43-->  <option value="gbplus">Galaxy Buds+</option> <!-- -buds-plus -->
+                              <!--44-->  <option value="gb">Galaxy Buds</option> <!-- -buds/ -->
+                              </optgroup>
+                            </select>
+                          </label>
+                <div class="test-code">
+
+                    <div class="home-kv-carousel__slide-inner pzn-im-cataf-tk">
+                        <div class="pzn-home-kv-carousel__text-wrap home-kv-carousel__text-wrap text-color--black home-kv-carousel__text-wrap--desktop-top-center home-kv-carousel__text-wrap--mobile-top-center">
+                            <h1 class="pzn-home-kv-carousel__headline home-kv-carousel__headline">Galaxy Z Fold2</h1>
+                            <p class="pzn-home-kv-carousel__desc home-kv-carousel__desc">The earbud designed to tune in to every moment.</p>
+                            <!-- <p class="home-kv-carousel__desc">All new Samsung washers & dryers</p> -->
+                            <div class="pzn-home-kv-carousel__cta-wrap home-kv-carousel__cta-wrap">
+                                <a class="cta cta--contained cta--black addlinks" href="https://www.samsung.com/uk/smartphones/galaxy-z-fold2/buy/" title="Learn more">Buy now</a>
+                            </div>
+                        </div>
+                        <div class="pzn-home-kv-carousel__background-media-wrap home-kv-carousel__background-media-wrap indicator-background">
+                            <div class="image image--main-loaded">
+                                <img alt="Galaxy Z Fold2" class="image__main responsive-img image--loaded" data-desktop-src="https://images.samsung.com/is/image/samsung/p5/uk/pzn/toolkits/im-cat-affinity/v3/1-ZFold2-pc.jpg?$ORIGIN_JPG$" data-mobile-src="https://images.samsung.com/is/image/samsung/p5/uk/pzn/toolkits/im-cat-affinity/v3/1-ZFold2-mb.jpg?$ORIGIN_JPG$"
+                                    src="https://images.samsung.com/is/image/samsung/p5/uk/pzn/toolkits/im-cat-affinity/v3/1-ZFold2-pc.jpg?$ORIGIN_JPG$" /></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Replace HTML code above here with your test HTML code -->
+                <div class="cg-content-ctas">
+                    <div class="cg-content-ctas-generate">
+                        <button class="sub generate-cta" onclick="return submission();">Generate</button>
+                    </div>
+                    <div class="cg-content-ctas-copy">
+                        <button class="sub copy-cta" onclick="return copied();">Copy to Clipboard</button>
+                    </div>
+                </div>
+                <div class="code-block-container">
+                    <textarea rows="99999" cols="99999" class="code-block"> </textarea>
+                </div>
+            </div>
+        </div>
+        <!-- You need to add the javascript functionality for your test here so it will work live on the page -->
+        <script type="text/javascript">
+            //<![CDATA[
+
+            /* Any custom code for the confluence setup */
+
+            //]]>
+        </script>
+        <!-- Confluence Page HTML/Styling Ends here -->
+        <script type="text/javascript" src="js/js-main.js"></script>
+</body>
+
+</html>
