@@ -30,14 +30,17 @@
 }
 
 .editLink-container .shade {
-    width: 100%;
-    height: 100%;
+    /* width: 100%;*/
+    /* height: 160%; */
     background-color: #000;
-    opacity: 0.4;
+    opacity: 0.6;
     z-index: 99;
-    display: block;
-    position: absolute;
-    /* display: none; */
+    /* display: block; */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .editLink-container .editLink-wrapper {
@@ -117,7 +120,7 @@
     width: 80%;
     margin-top: 10px;
     display: block;
-    width: 100%;
+    width: 95%;
     padding: 4px 6px;
 }
 
@@ -133,9 +136,9 @@
 
 .editLink-container .editLink-wrapper {
     position: fixed;
-    top: 60%;
+    top: 50%;
     z-index: 99999;
-    left: 60%
+    left: 47%
 }
 
 .addlinks:hover .tooltiptext {
@@ -231,6 +234,10 @@ body {
     background-color: #f7f7f7;
     font-family: 'SamsungOne', arial;
     padding: 100px 15px;
+}
+
+.cg-container * {
+    box-sizing: border-box;
 }
 
 .cg-container.open-nav.small-scrn .pzn-im-cataf-tk .pzn-home-kv-carousel__background-media-wrap {
